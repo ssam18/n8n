@@ -95,6 +95,7 @@ const projectSelectDisplayValue = computed(() => {
 				size="small"
 				:disabled="props.disabled"
 				:placeholder="i18n.baseText('settings.sso.settings.roleMappingRules.rule.selectRole')"
+				:class="$style.roleSelect"
 				data-test-id="rule-role-select"
 				@update:model-value="emit('update', props.rule.id, { role: String($event) })"
 			>
@@ -255,6 +256,10 @@ const projectSelectDisplayValue = computed(() => {
 	gap: var(--spacing--2xs);
 	padding: 0 var(--spacing--2xs);
 	flex-shrink: 0;
+}
+
+.roleSelect {
+	width: 130px;
 }
 
 .cellAction {
